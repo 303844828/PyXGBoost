@@ -1,10 +1,15 @@
 #Introduction
+
 xgboost for pyspark
 
+python3.5 spark2.4.x xgboost0.9
+
 # python install
+
 pip install PyXGBoost
 
 #code examples:
+
 ```python
 from pyspark.sql import SparkSession
 from PyXGBoost import PyXGBoostClassifier, PyXGBoostClassificationModel
@@ -39,7 +44,9 @@ xgbModel=PyXGBoostClassificationModel.load("hdfs://xxxx")
 result_df=xgbModel.transform(df,feature_names)
 
 ```
+
 #submit
+
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
 --jars pyspark-xgboost-1.0-SNAPSHOT.jar  \
@@ -49,14 +56,16 @@ spark-submit --master yarn-cluster --num-executors 100 \
 
 
 #简介
+
 pyspark版本的xgboost
 
 #首先执行：
+
 pip install PyXGBoost
-安装python版本xgboost
 
 
 #代码示例：
+
 ```python
 from pyspark.sql import SparkSession
 from PyXGBoost import PyXGBoostClassifier, PyXGBoostClassificationModel
@@ -95,7 +104,9 @@ result_df=xgbModel.transform(df,feature_names)
 
 
 #提交
+
 命令需要在两个地方带上jar包，示例：
+
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
 --jars pyspark-xgboost-1.0-SNAPSHOT.jar  \

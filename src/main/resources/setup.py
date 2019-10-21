@@ -28,7 +28,7 @@ else:
 
 
 setup(name="PyXGBoost",
-      version="1.0.3",
+      version="1.0.5",
       author="zhaobin",
       author_email="303844828@qq.com",
       long_description=long_description,
