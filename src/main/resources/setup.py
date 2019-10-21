@@ -8,7 +8,7 @@
 #==================================================================
 
 from distutils.core import setup
-# import requests
+#import requests
 import os
 
 # 将markdown格式转换为rst格式
@@ -28,7 +28,7 @@ else:
 
 
 setup(name="PyXGBoost",
-      version="1.0.5",
+      version="1.0.7",
       author="zhaobin",
       author_email="303844828@qq.com",
       long_description=long_description,
