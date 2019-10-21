@@ -44,6 +44,10 @@ xgbModel=PyXGBoostClassificationModel.load("hdfs://xxxx")
 result_df=xgbModel.transform(df,feature_names)
 
 ```
+## download jar
+
+https://github.com/303844828/PyXGBoost/blob/master/src/main/build/pyspark-xgboost-1.0-SNAPSHOT.jar
+
 
 ## submit
 
