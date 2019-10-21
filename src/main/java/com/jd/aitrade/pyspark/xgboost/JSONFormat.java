@@ -9,7 +9,6 @@ import com.alibaba.fastjson.JSON;
  * @date : 2019/10/15
  **/
 public class JSONFormat {
-
     public static String format(Object obj){
         return JSON.toJSONString(obj);
     }

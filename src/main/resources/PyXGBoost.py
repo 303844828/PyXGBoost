@@ -45,10 +45,21 @@ class PyXGBoostClassificationModel:
         self._jvmModel.save(path)
         return self
 
-    def load(self,path):
-        java_import(self._sqlc._jvm, "com.jd.aitrade.pyspark.xgboost.scala.PyXGBoostClassifier")
-        java_import(self._sqlc._jvm, "com.jd.aitrade.pyspark.xgboost.scala.PyXGBoostClassificationModel")
-        return PyXGBoostClassificationModel(self._sqlc,self._sqlc._jvm.PyXGBoostClassificationModel.load(path))
+    def saveOverwrite(self,path):
+        self._jvmModel.saveOverwrite(path)
+        return self
+
+    def write(self):
+        return self._jvmModel.write()
+
+    @staticmethod
+    def load(path):
+        sqlc = SparkSession \
+            .builder \
+            .getOrCreate()
+        java_import(sqlc._jvm, "com.jd.aitrade.pyspark.xgboost.scala.PyXGBoostClassifier")
+        java_import(sqlc._jvm, "com.jd.aitrade.pyspark.xgboost.scala.PyXGBoostClassificationModel")
+        return PyXGBoostClassificationModel(sqlc,sqlc._jvm.PyXGBoostClassificationModel.load(path))
 
 
 class PyXGBoostClassifier:
