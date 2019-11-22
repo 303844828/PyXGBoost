@@ -53,7 +53,7 @@ https://github.com/303844828/PyXGBoost/releases/tag/1.0
 
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
---jars pyspark-xgboost-1.0-SNAPSHOT.jar  \
+--jars pyspark-xgboost-1.0.jar  \
 --py-files pyspark-xgboost-1.0.jar \
 --files test.py
 ```
@@ -116,7 +116,7 @@ https://github.com/303844828/PyXGBoost/releases/tag/1.0
 
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
---jars pyspark-xgboost-1.0-SNAPSHOT.jar  \
+--jars pyspark-xgboost-1.0.jar  \
 --py-files pyspark-xgboost-1.0.jar \
 --files test.py      
 ```
