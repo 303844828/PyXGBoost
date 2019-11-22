@@ -46,7 +46,7 @@ result_df=xgbModel.transform(df,feature_names)
 ```
 ## download jar
 
-https://github.com/303844828/PyXGBoost/blob/master/src/main/build/pyspark-xgboost-1.0-SNAPSHOT.jar
+https://github.com/303844828/PyXGBoost/releases/tag/1.0
 
 
 ## submit
@@ -54,7 +54,7 @@ https://github.com/303844828/PyXGBoost/blob/master/src/main/build/pyspark-xgboos
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
 --jars pyspark-xgboost-1.0-SNAPSHOT.jar  \
---py-files pyspark-xgboost-1.0-SNAPSHOT.jar \
+--py-files pyspark-xgboost-1.0.jar \
 --files test.py
 ```
 
@@ -105,6 +105,9 @@ result_df=xgbModel.transform(df,feature_names)
 
 ```
 
+## 下载jar包：
+
+https://github.com/303844828/PyXGBoost/releases/tag/1.0
 
 
 ## 提交
@@ -114,6 +117,6 @@ result_df=xgbModel.transform(df,feature_names)
 ```shell
 spark-submit --master yarn-cluster --num-executors 100 \
 --jars pyspark-xgboost-1.0-SNAPSHOT.jar  \
---py-files pyspark-xgboost-1.0-SNAPSHOT.jar \
+--py-files pyspark-xgboost-1.0.jar \
 --files test.py      
 ```
